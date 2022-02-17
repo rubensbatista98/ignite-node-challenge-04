@@ -72,6 +72,8 @@ describe("[GET] /users/:user_id", () => {
 
     const response = await request(app).get(`/users/${user.id}`);
 
+    console.log(response.body);
+
     const parsedResponse = {
       ...response.body,
       created_at: new Date(response.body.created_at),

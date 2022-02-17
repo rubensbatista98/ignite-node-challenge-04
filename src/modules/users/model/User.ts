@@ -9,6 +9,8 @@ class User {
   admin: boolean;
 
   constructor(id?: string) {
+    this.admin = false;
+
     if (id) {
       this.id = id;
     } else {
