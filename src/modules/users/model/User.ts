@@ -1,7 +1,20 @@
 import { v4 as uuidV4 } from "uuid";
 
 class User {
-  // Complete aqui
+  created_at: Date;
+  updated_at: Date;
+  id: string;
+  name: string;
+  email: string;
+  admin: boolean;
+
+  constructor(id?: string) {
+    if (id) {
+      this.id = id;
+    } else {
+      this.id = uuidV4();
+    }
+  }
 }
 
 export { User };
